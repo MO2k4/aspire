@@ -9,8 +9,9 @@ warning: Method 'addExternalService' has collisions (Aspire.Hosting/addExternalS
 warning: Method 'addParameter' has collisions (Aspire.Hosting/addParameter, Aspire.Hosting/addParameterWithValue). 'Aspire.Hosting/addParameterWithValue' was removed. Use [AspireExport(MethodName = "uniqueName")] to set an explicit name. [Aspire.Hosting/addParameterWithValue]
 
 # Handle Types
-Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerDatabaseResource [ExposeProperties]
-Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource [ExposeProperties]
+Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlDatabaseResource [ExposeProperties]
+Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource [ExposeProperties]
+Aspire.Hosting.MySql/Aspire.Hosting.MySql.PhpMyAdminContainerResource
 Aspire.Hosting/Aspire.Hosting.ApplicationModel.CommandLineArgsCallbackContext [ExposeProperties]
 Aspire.Hosting/Aspire.Hosting.ApplicationModel.ContainerRegistryResource
 Aspire.Hosting/Aspire.Hosting.ApplicationModel.ContainerResource
@@ -141,30 +142,38 @@ Aspire.Hosting.ApplicationModel/ExecuteCommandContext.setCancellationToken(conte
 Aspire.Hosting.ApplicationModel/ExecuteCommandContext.setResourceName(context: Aspire.Hosting/Aspire.Hosting.ApplicationModel.ExecuteCommandContext, value: string) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ExecuteCommandContext
 Aspire.Hosting.ApplicationModel/getValue(context: Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression, cancellationToken: cancellationToken) -> string
 Aspire.Hosting.ApplicationModel/getValueAsync(context: Aspire.Hosting/Aspire.Hosting.ApplicationModel.EndpointReference, cancellationToken?: cancellationToken) -> string
+Aspire.Hosting.ApplicationModel/MySqlDatabaseResource.connectionStringExpression(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlDatabaseResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression
+Aspire.Hosting.ApplicationModel/MySqlDatabaseResource.databaseName(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlDatabaseResource) -> string
+Aspire.Hosting.ApplicationModel/MySqlDatabaseResource.jdbcConnectionString(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlDatabaseResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression
+Aspire.Hosting.ApplicationModel/MySqlDatabaseResource.name(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlDatabaseResource) -> string
+Aspire.Hosting.ApplicationModel/MySqlDatabaseResource.parent(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlDatabaseResource) -> Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource
+Aspire.Hosting.ApplicationModel/MySqlDatabaseResource.uriExpression(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlDatabaseResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression
+Aspire.Hosting.ApplicationModel/MySqlServerResource.connectionStringExpression(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression
+Aspire.Hosting.ApplicationModel/MySqlServerResource.databases(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource) -> Aspire.Hosting/Dict<string,string>
+Aspire.Hosting.ApplicationModel/MySqlServerResource.entrypoint(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource) -> string
+Aspire.Hosting.ApplicationModel/MySqlServerResource.host(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.EndpointReferenceExpression
+Aspire.Hosting.ApplicationModel/MySqlServerResource.jdbcConnectionString(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression
+Aspire.Hosting.ApplicationModel/MySqlServerResource.name(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource) -> string
+Aspire.Hosting.ApplicationModel/MySqlServerResource.port(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.EndpointReferenceExpression
+Aspire.Hosting.ApplicationModel/MySqlServerResource.primaryEndpoint(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.EndpointReference
+Aspire.Hosting.ApplicationModel/MySqlServerResource.setEntrypoint(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource, value: string) -> Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource
+Aspire.Hosting.ApplicationModel/MySqlServerResource.setShellExecution(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource, value: boolean) -> Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource
+Aspire.Hosting.ApplicationModel/MySqlServerResource.shellExecution(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource) -> boolean
+Aspire.Hosting.ApplicationModel/MySqlServerResource.uriExpression(context: Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression
 Aspire.Hosting.ApplicationModel/ReferenceExpressionBuilder.isEmpty(context: Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpressionBuilder) -> boolean
 Aspire.Hosting.ApplicationModel/ResourceUrlsCallbackContext.cancellationToken(context: Aspire.Hosting/Aspire.Hosting.ApplicationModel.ResourceUrlsCallbackContext) -> cancellationToken
 Aspire.Hosting.ApplicationModel/ResourceUrlsCallbackContext.executionContext(context: Aspire.Hosting/Aspire.Hosting.ApplicationModel.ResourceUrlsCallbackContext) -> Aspire.Hosting/Aspire.Hosting.DistributedApplicationExecutionContext
 Aspire.Hosting.ApplicationModel/ResourceUrlsCallbackContext.urls(context: Aspire.Hosting/Aspire.Hosting.ApplicationModel.ResourceUrlsCallbackContext) -> Aspire.Hosting/List<Aspire.Hosting/Aspire.Hosting.ApplicationModel.ResourceUrlAnnotation>
-Aspire.Hosting.ApplicationModel/SqlServerDatabaseResource.connectionStringExpression(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerDatabaseResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression
-Aspire.Hosting.ApplicationModel/SqlServerDatabaseResource.databaseName(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerDatabaseResource) -> string
-Aspire.Hosting.ApplicationModel/SqlServerDatabaseResource.jdbcConnectionString(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerDatabaseResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression
-Aspire.Hosting.ApplicationModel/SqlServerDatabaseResource.name(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerDatabaseResource) -> string
-Aspire.Hosting.ApplicationModel/SqlServerDatabaseResource.parent(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerDatabaseResource) -> Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource
-Aspire.Hosting.ApplicationModel/SqlServerDatabaseResource.uriExpression(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerDatabaseResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression
-Aspire.Hosting.ApplicationModel/SqlServerServerResource.connectionStringExpression(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression
-Aspire.Hosting.ApplicationModel/SqlServerServerResource.databases(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource) -> Aspire.Hosting/Dict<string,string>
-Aspire.Hosting.ApplicationModel/SqlServerServerResource.entrypoint(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource) -> string
-Aspire.Hosting.ApplicationModel/SqlServerServerResource.host(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.EndpointReferenceExpression
-Aspire.Hosting.ApplicationModel/SqlServerServerResource.jdbcConnectionString(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression
-Aspire.Hosting.ApplicationModel/SqlServerServerResource.name(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource) -> string
-Aspire.Hosting.ApplicationModel/SqlServerServerResource.port(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.EndpointReferenceExpression
-Aspire.Hosting.ApplicationModel/SqlServerServerResource.primaryEndpoint(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.EndpointReference
-Aspire.Hosting.ApplicationModel/SqlServerServerResource.setEntrypoint(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource, value: string) -> Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource
-Aspire.Hosting.ApplicationModel/SqlServerServerResource.setShellExecution(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource, value: boolean) -> Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource
-Aspire.Hosting.ApplicationModel/SqlServerServerResource.shellExecution(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource) -> boolean
-Aspire.Hosting.ApplicationModel/SqlServerServerResource.uriExpression(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression
-Aspire.Hosting.ApplicationModel/SqlServerServerResource.userNameReference(context: Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ReferenceExpression
 Aspire.Hosting.Eventing/IDistributedApplicationEventing.unsubscribe(context: Aspire.Hosting/Aspire.Hosting.Eventing.IDistributedApplicationEventing, subscription: Aspire.Hosting/Aspire.Hosting.Eventing.DistributedApplicationEventSubscription) -> void
+Aspire.Hosting.MySql/addDatabase(name: string, databaseName?: string) -> Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlDatabaseResource
+Aspire.Hosting.MySql/addMySql(name: string, password?: Aspire.Hosting/Aspire.Hosting.ApplicationModel.ParameterResource, port?: number) -> Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource
+Aspire.Hosting.MySql/withCreationScript(script: string) -> Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlDatabaseResource
+Aspire.Hosting.MySql/withDataBindMount(source: string, isReadOnly?: boolean) -> Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource
+Aspire.Hosting.MySql/withDataVolume(name?: string, isReadOnly?: boolean) -> Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource
+Aspire.Hosting.MySql/withHostPort(port: number) -> Aspire.Hosting.MySql/Aspire.Hosting.MySql.PhpMyAdminContainerResource
+Aspire.Hosting.MySql/withInitFiles(source: string) -> Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource
+Aspire.Hosting.MySql/withPassword(password: Aspire.Hosting/Aspire.Hosting.ApplicationModel.ParameterResource) -> Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource
+Aspire.Hosting.MySql/withPhpMyAdmin(configureContainer?: callback, containerName?: string) -> Aspire.Hosting.MySql/Aspire.Hosting.ApplicationModel.MySqlServerResource
 Aspire.Hosting.Pipelines/dependsOn(context: Aspire.Hosting/Aspire.Hosting.Pipelines.PipelineStep, stepName: string) -> void
 Aspire.Hosting.Pipelines/getStepsByTag(context: Aspire.Hosting/Aspire.Hosting.Pipelines.PipelineConfigurationContext, tag: string) -> Aspire.Hosting/Aspire.Hosting.Pipelines.PipelineStep[]
 Aspire.Hosting.Pipelines/PipelineConfigurationContext.setSteps(context: Aspire.Hosting/Aspire.Hosting.Pipelines.PipelineConfigurationContext, value: Aspire.Hosting/Aspire.Hosting.Pipelines.PipelineStep[]) -> Aspire.Hosting/Aspire.Hosting.Pipelines.PipelineConfigurationContext
@@ -182,13 +191,6 @@ Aspire.Hosting.Pipelines/PipelineStep.tags(context: Aspire.Hosting/Aspire.Hostin
 Aspire.Hosting.Pipelines/PipelineStepContext.cancellationToken(context: Aspire.Hosting/Aspire.Hosting.Pipelines.PipelineStepContext) -> cancellationToken
 Aspire.Hosting.Pipelines/PipelineStepContext.executionContext(context: Aspire.Hosting/Aspire.Hosting.Pipelines.PipelineStepContext) -> Aspire.Hosting/Aspire.Hosting.DistributedApplicationExecutionContext
 Aspire.Hosting.Pipelines/requiredBy(context: Aspire.Hosting/Aspire.Hosting.Pipelines.PipelineStep, stepName: string) -> void
-Aspire.Hosting.SqlServer/addDatabase(name: string, databaseName?: string) -> Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerDatabaseResource
-Aspire.Hosting.SqlServer/addSqlServer(name: string, password?: Aspire.Hosting/Aspire.Hosting.ApplicationModel.ParameterResource, port?: number) -> Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource
-Aspire.Hosting.SqlServer/withCreationScript(script: string) -> Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerDatabaseResource
-Aspire.Hosting.SqlServer/withDataBindMount(source: string, isReadOnly?: boolean) -> Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource
-Aspire.Hosting.SqlServer/withDataVolume(name?: string, isReadOnly?: boolean) -> Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource
-Aspire.Hosting.SqlServer/withHostPort(port: number) -> Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource
-Aspire.Hosting.SqlServer/withPassword(password: Aspire.Hosting/Aspire.Hosting.ApplicationModel.ParameterResource) -> Aspire.Hosting.SqlServer/Aspire.Hosting.ApplicationModel.SqlServerServerResource
 Aspire.Hosting/addConnectionString(name: string, environmentVariableName?: string) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.IResourceWithConnectionString
 Aspire.Hosting/addConnectionStringBuilder(name: string, connectionStringBuilder: callback) -> Aspire.Hosting/Aspire.Hosting.ConnectionStringResource
 Aspire.Hosting/addContainer(name: string, image: string) -> Aspire.Hosting/Aspire.Hosting.ApplicationModel.ContainerResource
